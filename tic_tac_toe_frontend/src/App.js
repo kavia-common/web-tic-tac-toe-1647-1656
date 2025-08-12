@@ -56,7 +56,7 @@ export default function App() {
         <div className="controls">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-danger"
             onClick={handleReset}
             aria-label="Reset game"
           >

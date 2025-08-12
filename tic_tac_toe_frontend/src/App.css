@@ -175,6 +175,24 @@
   border-color: rgba(25,118,210,0.5);
 }
 
+/* Danger (Reset) button uses the secondary red for strong affordance */
+.btn-danger {
+  background: linear-gradient(180deg, #f44336 0%, #d32f2f 100%); /* secondary (red) to a darker red for contrast */
+  color: #ffffff;
+  border-color: rgba(244, 67, 54, 0.5);
+}
+.btn-danger:hover {
+  background: linear-gradient(180deg, #d32f2f 0%, #c62828 100%);
+  border-color: rgba(211, 47, 47, 0.6);
+}
+
+/* High-contrast focus style for accessibility on the reset button */
+.btn-danger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.35), 0 6px 16px rgba(17, 24, 39, 0.12);
+  transform: translateY(-1px);
+}
+
 /* Responsive tweaks */
 @media (max-width: 480px) {
   .game-card {
