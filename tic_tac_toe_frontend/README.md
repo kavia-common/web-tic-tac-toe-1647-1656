@@ -1,82 +1,56 @@
-# Lightweight React Template for KAVIA
+# Tic Tac Toe – React Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A lightweight, modern React implementation of Tic Tac Toe with a centered, responsive 3x3 grid, player turn indicator, win/draw detection, and a reset button. Designed with a minimal, light theme using the provided color palette.
 
 ## Features
+- Interactive 3x3 grid
+- Player turn indicator (X/O)
+- Win and draw detection with winning line highlight
+- Reset game functionality
+- Responsive, mobile-friendly layout
+- Modern, minimalistic light theme
+- Accessible labels and status updates
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+## Tech
+- React 18, Create React App tooling
+- No heavy UI frameworks; pure CSS
+- Minimal dependencies for fast load
 
-## Getting Started
+## Quick Start
+In the project directory, run:
 
-In the project directory, you can run:
+### `npm install`
+Install dependencies.
 
 ### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode.
+Open http://localhost:3000 to view it in your browser.
 
 ### `npm test`
-
-Launches the test runner in interactive watch mode.
+Launches the test runner in watch mode.
 
 ### `npm run build`
+Builds the app for production to the `build` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Color Palette
+- Primary: `#1976d2`
+- Secondary: `#f44336`
+- Accent: `#ffc107`
 
-## Customization
+## Project Structure
+- `src/components/Board.jsx` – Renders the 3x3 grid
+- `src/components/Square.jsx` – Individual square cell
+- `src/components/StatusBar.jsx` – Displays current player, win/draw
+- `src/utils/gameLogic.js` – Winner calculation utility
+- `src/App.js` – Main app layout and game state
+- `src/App.css` – Styling for the game UI
+- `src/App.test.js` – Basic test for rendering
 
-### Colors
+## Accessibility
+- Role and aria labels for the status and board
+- Live region for status updates
+- Test IDs for grid squares to aid testing
 
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+- No environment variables are required.
+- To extend the game (e.g., move history, AI), consider adding context and enhancing `src/utils/gameLogic.js`.
